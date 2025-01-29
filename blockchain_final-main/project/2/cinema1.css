@@ -1,0 +1,57 @@
+.hidden {
+    display: none;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .screen {
+    background: #444;
+    height: 50px;
+    width: 75%;
+    margin: 20px 0;
+    border-radius: 15px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .seat {
+    background: #444;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .seat.selected {
+    background: #6feaf6;
+  }
+  
+  .seat.occupied {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .showcase .seat {
+    height: 15px;
+    width: 15px;
+  }
+  
+  .showcase small {
+    margin-left: 10px;
+    color: #555;
+  }
+  
+  #confirm {
+    margin-top: 15px;
+  }
+  

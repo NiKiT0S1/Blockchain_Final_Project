@@ -1,0 +1,1253 @@
+/*........................................................... General */
+
+@font-face {
+
+    /* Imports non-google font */
+    font-family: "Kalligraphia";
+    src: url("../fonts/Kalligraphia-D-OT_25803.ttf");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Upcoming Events Section */
+#upcoming-events {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+#upcoming-events .page-header h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#upcoming-events .block-divider {
+    width: 50px;
+    height: 4px;
+    margin: 10px auto;
+    background-color: #ffffff;
+}
+
+#upcoming-events p#events-text {
+    font-size: 16px;
+    text-align: center;
+    color: #dcdcdc;
+}
+
+/* Event Card */
+.event-card {
+    background-color: #34495e;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.event-card:hover {
+    background-color: #3d566e;
+    transition: background-color 0.3s ease;
+}
+
+.event-card .event-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.event-card .media-heading {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.event-card p {
+    font-size: 14px;
+    color: #dcdcdc;
+}
+
+
+
+
+
+/* All button styles */
+.carousel-all-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-all-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.carousel-all-btn:active {
+    background-color: #003f7f;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* General container styles */
+.container-wrapper {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+.band-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section title and subtitle */
+.page-header h2.text-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.page-header p.text-muted {
+    text-align: center;
+    font-size: 16px;
+    color: #777;
+}
+
+/* Divider */
+.block-divider {
+    width: 50px;
+    height: 4px;
+    margin: 10px auto;
+    background-color: #333;
+}
+
+/* Carousel styles */
+.carousel-inner {
+    margin-top: 20px;
+}
+
+.carousel-item {
+    padding: 20px;
+}
+
+/* Media block styles */
+.media.band-member {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.media-left img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.media-body blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+.media-body blockquote p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.media-body blockquote footer {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #333;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Carousel indicators */
+.carousel-indicators li {
+    background-color: #333;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    background-color: #777;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .media.band-member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .media-left img {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* navbar */
+.navbar {
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav-buttons .btn {
+    margin-left: 10px;
+    font-size: 1rem;
+    padding: 6px 12px;
+}
+/* Basic settings for main text font */
+
+body {
+
+
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+
+}
+
+/* Projects default settings for hyper-links */
+
+a {
+
+    color: white;
+    text-decoration: none;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+
+}
+
+/* Same as previous except for hover settings */
+
+a:hover {
+
+    color: white;
+}
+
+/*............................................................  Containers */
+
+/* base code from whiskey drop module, altered to fit project*/
+
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* base code from whiskey drop module, altered to fit project*/
+
+.callout-container {
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/236x/0a/5b/8f/0a5b8f214e56078c563a2f8cd462fcd0.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+/* padding added to top and bottom of sections*/
+
+.content-container {
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+}
+
+/* background image settings */
+
+.gigs-container {
+    background-image: url("https://i.pinimg.com/736x/6a/2c/82/6a2c82554c8ab204a7586e18f623db1a.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* base code from whiskey drop module, altered to fit project*/
+
+.gig-opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* background image settings for video section */
+
+.video-container {
+    background-image: url("../images/video-header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* background color setting */
+
+.gallery-container {
+    background-image: url("../images/monkees.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* background color setting */
+
+.social-container {
+    background-color: white;
+}
+
+/*............................................................  Logo */
+
+/* alterations to the bootstrap class img-responsive*/
+
+.img-logo {
+    margin: 0 auto;
+    padding-top: 30px;
+    display: block;
+    max-width: 100%;
+    height: 400px;
+}
+
+/*............................................................  Navbar Section */
+
+/* alterations made to Bootstraps navbar class for project specific navbar set up*/
+
+.navbar {
+    margin-bottom: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .5);
+    border: 0;
+}
+
+/* removes border from expanded menu button in mobile version of navbar */
+
+.navbar-default .navbar-collapse {
+
+    border-color: black;
+    width: 100%;
+}
+
+/* When expand menu button (mobile only)is selected its background colors remains transparent */
+
+.navbar-default .navbar-toggle:hover .navbar-default .navbar-toggle:visited .navbar-default .navbar-toggle:active .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+}
+
+/* colors the bars in the expand menu button to white */
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+/* when a link item is interacted with it remains white */
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+    color: white;
+}
+
+/* basic settings for link items */
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+    font-size: 20px;
+}
+
+/* sets font type for link items in mobile nav */
+
+.navbar a {
+    font-family: "Kalligraphia", sans-serif;
+}
+
+/*alterations made to Bootstraps navbar-brand class for project specific navbar set up on mobile */
+
+.navbar-brand {
+    font-size: 25px;
+    padding-top: 18px;
+}
+
+/*Sets background color to transparent*/
+
+.navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+/*............................................................  Jumbotron Section */
+
+/* alterations made to bootstraps jumbotron class */
+
+.jumbotron {
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+/* font settings for the music service links in jumbotron */
+
+.lead.music-service {
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    color: white;
+}
+
+/* font settings for the music service links in jumbotron upon hover */
+
+.lead.music-service:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* settings for the new album details in jumbotron */
+
+.lead.music-text {
+    font-style: italic;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
+    margin: 25px 0;
+}
+
+/*............................................................  Block dividers */
+
+/* block divider borrowed from whiskey drop module, sets divider dimensions relies on either black or white versions for color */
+
+.block-divider {
+    width: 35px;
+    height: 5px;
+    border: 0;
+}
+
+/*Sets background color */
+
+.block-divider--white {
+    background-color: white;
+}
+
+/*Sets background color */
+
+.block-divider--black {
+    background-color: black;
+}
+
+/*........................................................... Section Titles */
+
+/* colors text white */
+
+.page-header .white-title {
+    color: white;
+}
+
+/* sets font for section titles */
+
+.text-title {
+    font-family: "Kalligraphia", sans-serif;
+}
+
+/* basic font settings */
+
+.social-title {
+    color: black;
+    font-weight: 300;
+}
+
+/* ............................................................ Page Headers */
+
+/* extra styles added to bootstrap page-header class */
+
+.page-header {
+    margin-bottom: 0;
+    border-bottom: 0;
+    text-align: center;
+}
+
+/* removed margin-top */
+
+.page-header h2 {
+    margin-top: 0;
+}
+
+/* added 25 px of space at the bottom */
+
+.band .page-header {
+    margin-bottom: 25px;
+}
+
+/* added 25 px of space at the bottom */
+
+.gigs .page-header {
+    margin-bottom: 25px;
+}
+
+/* added 25 px of space at the bottom */
+
+.music .page-header {
+    margin-bottom: 25px;
+}
+
+/* added 25 px of space at the bottom */
+
+.video .page-header {
+    margin-bottom: 25px;
+}
+
+/*............................................................  Section Text */
+
+/* aligns text in center */
+
+.section-text p {
+    text-align: center;
+}
+
+/*............................................................ Band Section */
+
+/* removes border on the left */
+
+blockquote {
+    border-left: 0;
+}
+
+/* puts 25px of space at the bottom */
+
+.media-body {
+    padding-bottom: 25px;
+}
+
+/* sets font size */
+
+.media-body p {
+    font-size: 14px;
+}
+
+/*............................................................  Gigs Section */
+
+/* sets color of text to white */
+
+.gigs-text {
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* sets color of text inside table to white */
+
+body table {
+    color: white;
+}
+
+/* styles sold out! to look like the other live links */
+
+.dead-link {
+    color: white;
+    text-decoration: none;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+.label {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    
+    
+}
+
+/* top line of gigs table positioning */ 
+
+.table>tbody>tr>td{
+    vertical-align: middle;
+}
+/*............................................................  Buttons */
+
+/* extra styles added to bootstrap button class */
+
+.btn--cta {
+    font-weight: bold;
+    border-radius: 23px;
+    width: 160px;
+    background-color: #31b0d5;
+    color: white;
+}
+
+/* ........................................................ Booking Modal */
+
+/* To center vertically */
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+/*........................................................ Music Section */
+
+/* centers text sets width */
+
+p .section-text {
+    text-align: center;
+    width: 30em;
+    padding-left: 50%;
+    padding-right: 50%;
+}
+
+/*......................................................... Gallery Section */
+
+/*For uniform sizing */
+
+.gallery-img {
+    display: block;
+    max-width: 100%;
+    height: 400px !important;
+
+
+}
+
+/* colors text white */
+
+#gallery-text {
+    color: white;
+}
+
+/*............................................................ Video Section*/
+
+/* colors text white */
+
+#video-text {
+    color: white;
+}
+
+/* makes video centered and responsive */
+
+video {
+    height: auto !important;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+}
+
+/*............................................................ Social Footer */
+
+/* basic font settings */
+
+.lead.social-text {
+    font-family: "Kalligraphia", sans-serif;
+    font-size: 35px;
+    color: white;
+    text-decoration: underline;
+}
+
+/* basic font settings, positioning and removal of style, margin and padding from list */
+
+.social-list {
+    font-size: 45px;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+/* displays list horizontally instead of vertically */
+
+.social-list li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* colors font awesome social icons black */
+
+.fa {
+    color: black;
+}
+
+/* styles newsletter subscription */
+
+#signup.contact-form {
+    display: block;
+    font-size: 14px;
+    margin-top: 0em;
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    padding-top: 25px;
+}
+
+/* styles back to top link */
+
+#back {
+    color: black;
+    text-decoration: underline;
+}
+
+/* sets border color */
+
+input .email-box {
+    border-color: black;
+}
+
+/*......................................................... MEDIA QUERIES */
+
+@media (min-width: 768px) {
+
+    /*............................................................  Containers */
+    
+    /* base code from whiskey drop module, altered to fit project*/
+    
+    .callout-container {
+        height: 100vh;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    /*............................................................  Logo */
+    
+    /* controls monkees logo img size */
+    
+    .img-responsive {
+        padding-top: 90px;
+
+
+    }
+
+    /*............................................................  Navbar Section */
+    
+    /*Changes navbar display type*/
+    
+    .navbar {
+        margin-bottom: 0;
+        position: absolute;
+        
+    }
+    
+    /*navbar display settings*/
+    
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top
+    }
+    
+    /* aligns navbar items in the center */
+    
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+    
+    /* styles navbar items spacing*/
+    
+    .navbar-nav>li {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+    }
+    
+    /* removes background color */
+    
+    .navbar {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    
+    /* font styles and transition settings for navbar items*/
+    
+    .navbar-default .navbar-nav>li>a {
+        transition: text-decoration 0.5s ease-in-out;
+        font-size: 35px;
+        font-family: "Kalligraphia", sans-serif;
+        color: white;
+    }
+    
+    /* when navbar items are interacted with they are underlined */
+    
+    .navbar-default .navbar-nav>li>a:hover,
+    .navbar-default .navbar-nav>li>a:active {
+        text-decoration: underline;
+    }
+
+    /*............................................................  Jumbotron Section*/
+    
+    /* Basic font settings */
+    
+    .lead.music-text {
+        font-style: italic;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        font-size: 25px;
+        color: white;
+        margin: 25px 0;
+    }
+
+    /*............................................................  Video Section */
+    
+    /*sets video width*/
+    
+    video {
+        width: 60%;
+
+    }
+}
+
+/* 
+карточки театров итд */
+/* Карточки одинакового размера */
+/* Карточки одинаковой высоты */
+.media.band-member {
+    display: flex;
+    gap: 15px;
+    min-height: 220px; /* Фиксируем минимальную высоту карточки */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+}
+
+/* Изображения */
+.media.band-member .media-left img {
+    width: 120px; /* Фиксированная ширина */
+    height: 120px; /* Фиксированная высота */
+    object-fit: cover; /* Масштабируем изображение с сохранением пропорций */
+    border-radius: 50%; /* Скругленные углы для круглых изображений */
+}
+
+/* Текст внутри карточек */
+.media.band-member .media-body {
+    flex: 1; /* Занимает оставшееся пространство */
+    display: flex;
+    flex-direction: column; /* Текст располагается вертикально */
+    justify-content: center; /* Выравнивание текста по центру карточки */
+}
+
+/* 
+see all кнопка */
+/* Кнопка рядом с заголовком */
+.btn-more {
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 50px; /* Закругленные края */
+    padding: 5px 15px;
+    border: 1px solid #007bff; /* Синий контур */
+    color: #007bff; /* Синий текст */
+    transition: all 0.3s ease-in-out; /* Анимация наведения */
+}
+
+.btn-more:hover {
+    background-color: #007bff; /* Синий фон */
+    color: #fff; /* Белый текст */
+}
+
+
+
+/* театр цсс */
+/* Navbar adjustments */
+.custom-navbar {
+    height: 60px;
+    padding: 0.5rem 1rem;
+}
+
+.custom-navbar-nav {
+    display: flex; /* Horizontal alignment */
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.custom-nav-item {
+    list-style: none;
+}
+
+.custom-nav-link {
+    color: #ffffff;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.custom-nav-link:hover {
+    color: #ffc107;
+}
+
+.custom-navbar-brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.custom-navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+/* Adjusting buttons for Sign In and Sign Up */
+.custom-btn {
+    font-family: 'Arial', sans-serif; /* Change to any font you prefer */
+    font-size: 0.85rem; /* Adjust font size */
+    padding: 0.4rem 0.9rem;
+    text-transform: uppercase;
+}
+
+.btn-outline-light {
+    border-color: #ffc107;
+    color: #ffc107;
+}
+
+.btn-outline-light:hover {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.btn-primary {
+    background-color: #0069d9;
+    border-color: #0069d9;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* рекомендуем страница */
+
+
+
+
+
+
+
+
+
+
+/* концерт страница */
+/* General container and layout adjustments */
+.concert-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.concert-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.concert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling */
+.concert-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 5px solid #f7b42c;
+    transition: transform 0.5s ease;
+}
+
+.concert-img img:hover {
+    transform: scale(1.1);
+}
+
+/* Title and text styling */
+.concert-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.concert-info {
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.concert-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.concert-date,
+.concert-location {
+    font-size: 1rem;
+    color: #f7b42c;
+    margin-bottom: 5px;
+}
+
+/* Button styling */
+.btn-warning {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f7b42c;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: #d59a24;
+}
+
+/* Divider style */
+.block-divider {
+    margin: 15px 0;
+    border-top: 2px solid #f0f0f0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .concert-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .concert-title {
+        font-size: 1.5rem;
+    }
+
+    .concert-description {
+        font-size: 0.95rem;
+    }
+
+    .concert-date,
+    .concert-location {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .concert-container {
+        grid-template-columns: 1fr;
+    }
+
+    .concert-title {
+        font-size: 1.3rem;
+    }
+
+    .concert-description {
+        font-size: 0.9rem;
+    }
+
+    .concert-date,
+    .concert-location {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+/* cards in cinema */
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    position: relative;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 200px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.card-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.card-hover span {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #ffd700;
+}
+
+.card-hover h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.card-hover button {
+    background-color: #ffa500;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-hover button:hover {
+    background-color: #ff8c00;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.card:hover .card-hover {
+    opacity: 1;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #555;
+}

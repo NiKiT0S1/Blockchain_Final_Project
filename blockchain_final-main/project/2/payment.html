@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <!-- Подключение Web3.js через CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.8.2/dist/web3.min.js"></script>
+    <script src="buyTicket.js"></script> <!-- Ваш скрипт оплаты -->
+</head>
+<body>
+    <h1>Payment Page</h1>
+    <p id="eventDetails"></p>
+    <button id="confirmPayment" class="btn btn-primary">Confirm Payment</button>
+
+    <script>
+        // Инициализация Web3 с Ganache
+        const ganacheURL = "http://127.0.0.1:7545"; // URL RPC-сервера Ganache
+        const web3 = new Web3(new Web3.providers.HttpProvider(ganacheURL));
+        console.log("Web3 initialized with Ganache.");
+
+        // Получение параметров из URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const eventId = urlParams.get("eventId");
+        const price = urlParams.get("price");
+
+        // Отображение деталей события
+        document.getElementById("eventDetails").innerText = `Event ID: ${eventId}, Price: ${price} ₸`;
+
+        // Привязка кнопки "Confirm Payment" к функции buyTicket
+        document.getElementById("confirmPayment").addEventListener("click", async function () {
+            try {
+                // Получение первого аккаунта из Ganache
+                const accounts = await web3.eth.getAccounts();
+                const buyerAddress = accounts[0]; // Используется первый аккаунт
+                console.log("Buyer Address:", buyerAddress);
+
+                // Цена билета в Wei (перевод из Ether)
+                const ticketPrice = web3.utils.toWei(price, "ether"); // Цена передается через URL (например, 0.1 ETH)
+
+                // Вызов функции buyTicket
+                await buyTicket(eventId, buyerAddress, ticketPrice);
+                alert("Ticket purchased successfully!");
+            } catch (error) {
+                console.error("Payment failed:", error);
+                alert("Payment failed. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>
