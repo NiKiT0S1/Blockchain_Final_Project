@@ -65,6 +65,7 @@
                     <li><a href="concert.html">Concerts</a></li>
                     <li><a href="sports.html">Sports</a></li>
                     <li><a href="festivals.html">Festivals</a></li>
+                    <!-- <li><button id="connect" onclick="Connect()" class="btn btn-primary">Connect Wallet</button></li> -->
                 </ul>
             </div>
         </div>
@@ -94,6 +95,7 @@
                                         <span>КИНО</span>
                                         <h5>Мәді in China (2024)</h5>
                                         <button class="btn btn-warning">Купить билет</button>
+                                        <!-- <button id="purchaseTicket" onclick="purchaseTicket()" class="btn btn-warning">Купить билет</button> -->
                                     </div>
                                     <img src="https://i.ibb.co/cyNKMj0/image-42.webp" alt="Мәді in China" class="card-img-top">
                                 </a>
@@ -193,7 +195,49 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.5/web3.min.js"></script>
+    <script src="app.js"></script>
+    <!-- <script>
+        var web3;
+        var address="0xdCD2DF1606cd67323f6A1ED208807f216Bd94849";
+        var abi = [ /* ABI CODE HERE */ ];
+        var contract;
+
+        async function connectWallet() {
+            if (window.ethereum) {
+                web3 = new Web3(window.ethereum);
+                await window.ethereum.enable();
+                contract = new web3.eth.Contract(abi, address);
+                alert("Wallet Connected");
+            } else {
+                alert("Please install MetaMask!");
+            }
+        }
+
+        function createTicket() {
+            var eventName = document.getElementById("eventName").value;
+            var price = document.getElementById("price").value;
+            web3.eth.getAccounts().then(account => {
+                return contract.methods.createTicket(eventName, web3.utils.toWei(price, "ether"))
+                    .send({ from: account[0] });
+            }).then(() => {
+                alert("Ticket Created!");
+            }).catch(err => alert(err));
+        }
+
+        function purchaseTicket() {
+            var ticketId = document.getElementById("ticketId").value;
+            var ticketPrice = document.getElementById("ticketPrice").value;
+            web3.eth.getAccounts().then(account => {
+                return contract.methods.purchaseTicket(ticketId)
+                    .send({ from: account[0], value: web3.utils.toWei(ticketPrice, "ether") });
+            }).then(() => {
+                alert("Ticket Purchased!");
+            }).catch(err => alert(err));
+        }
+    </script> -->
     
 </body>
 </html>
