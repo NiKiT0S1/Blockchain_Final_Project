@@ -53,9 +53,30 @@ The contract contains the following key functionalities:
 ### Resetting Events
 To reset event logs, redeploy the smart contract and update its address in `app.js`.
 
+## Unit Testing (EventTicketing.test.js)
+Unit tests for the `EventTicketing.sol` smart contract have been implemented using Hardhat and Ethers.js. The tests validate the correctness of ticket creation, purchasing, and error handling. Below are the key test cases:
+
+- **Contract Deployment:** Ensures the contract is deployed with the correct owner.
+- **Creating Tickets:** Verifies that a ticket is created with the correct `eventName`, `price`, and `isSold` status.
+- **Event Emission:** Checks that `TicketCreated` and `TicketPurchased` events are emitted with the correct arguments.
+- **Error Handling:**
+  - Prevents ticket creation with a zero price.
+  - Rejects purchasing an already sold ticket.
+  - Rejects ticket purchases with insufficient funds.
+  - Ensures accessing a nonexistent ticket reverts with an error.
+- **State Changes:** Ensures that after a purchase, the ticket is marked as sold and assigned to the correct owner.
+- **Function Return Values:** Validates that `getTicket()` returns the correct ticket details.
+
+## Hardhat and Project Structure
+- Hardhat and Ethers.js were installed and initialized to enable redeployment of the same smart contract used in Remix IDE without any modifications.
+- The project is structured as follows:
+  - **`contracts/`**: Contains the `EventTicketing.sol` smart contract.
+  - **`test/`**: Contains the `EventTicketing.test.js` file with unit tests.
+
 ## Technologies Used
 - **Solidity** - Smart contract development
 - **Web3.js** - Blockchain interaction
 - **MetaMask** - Wallet integration
 - **Bootstrap** - Frontend styling
 - **Ganache/Testnet** - Local Ethereum environment
+- **Hardhat & Ethers.js** - Smart contract deployment and testing
