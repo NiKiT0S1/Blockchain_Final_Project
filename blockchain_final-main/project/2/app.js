@@ -4,6 +4,7 @@ var address="0xdCD2DF1606cd67323f6A1ED208807f216Bd94849";
 async function Connect() {
     await window.web3.currentProvider.enable();
     web3 = new Web3(window.web3.currentProvider);
+	alert("Wallet connected!");
 }
 
 if(typeof web3 != "undefined") {
@@ -11,6 +12,7 @@ if(typeof web3 != "undefined") {
 }
 else {
     web3 = new Web3(new Web3.Provider.HttpProvider("HTTP://127.0.0.1:7545"));
+	alert("Wallet connected!");
 }
 
 var abi = [
@@ -220,7 +222,12 @@ function createTicket() {
     var eventName = document.getElementById("eventName").value;
     var price = document.getElementById("price").value;
 
-    web3.eth.getAccounts().then(function(account) {
+    if(!eventName || !price) {
+		alert("Введите название события и цену билета!");
+		return;
+	}
+	
+	web3.eth.getAccounts().then(function(account) {
         return contract.methods.createTicket(eventName, price).send({ from: account[0] });
     }).then(function(tmp) {
         $("#eventName").val("");
@@ -235,7 +242,12 @@ function purchaseTicket() {
     var ticketId = document.getElementById("ticketId").value;
     var ticketPrice = document.getElementById("ticketPrice").value;
 
-    web3.eth.getAccounts().then(function(account) {
+    if(!ticketId || !ticketPrice) {
+		alert("Введите ID билета или сумму оплаты!");
+		return;
+	}
+	
+	web3.eth.getAccounts().then(function(account) {
         return contract.methods.getTicket(ticketId).call();
     }).then(function(ticket) {
         if (ticket.isSold) {
@@ -269,7 +281,12 @@ function purchaseTicket() {
 function getTicket() {
     var ticketId = document.getElementById("getTicketId").value;
 
-    contract.methods.getTicket(ticketId).call().then(function(ticket) {
+    if(!ticketId) {
+		alert("Введите ID билета для поиска");
+		return;
+	}
+	
+	contract.methods.getTicket(ticketId).call().then(function(ticket) {
         if (ticket.id == 0) {
             $("#ticketDetails").html("Ticket not found.");
         } else {
